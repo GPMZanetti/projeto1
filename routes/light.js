@@ -4,12 +4,12 @@ const Gpio = require("onoff").Gpio;
 
 const led = new Gpio(4, 'out');
 
-router.post('/acender', function(req, res, next) {
+router.post('/on', function(req, res, next) {
   led.writeSync(1);
   res.json({ 'status': 'OK', 'data': 'Led Aceso' });
 });
 
-router.post('/apagar', function(req, res, next) {
+router.post('/off', function(req, res, next) {
   led.writeSync(0);
   res.json({ 'status': 'OK', 'data': 'Led Apagado' });
 });
