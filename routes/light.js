@@ -15,8 +15,8 @@ router.post('/off', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/light', function(req, res, next) {
-  res.render('light', { title: 'Controle de LED' });
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Controle de LED' });
 });
 
 module.exports = router;
